@@ -92,7 +92,7 @@
       "id": "english-1-1",
       "code": "ENG English",
       "title": "English",
-      "credits": 3.0,
+      "credits": 2.0,
       "status": "official",
       "sourceIds": [
         "1-1-compiled-xlsx"
@@ -103,7 +103,7 @@
       "id": "english-lab-1-1",
       "code": "ENG Lab",
       "title": "English Lab",
-      "credits": 1.5,
+      "credits": 1,
       "status": "official",
       "sourceIds": [
         "1-1-compiled-xlsx"
