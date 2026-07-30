@@ -1,0 +1,112 @@
+{
+  "valid": true,
+  "stats": {
+    "sourceCount": 10,
+    "officialSourceCount": 7,
+    "courseCount": 9,
+    "regularStudentCount": 116,
+    "officialRegularStudentCount": 96,
+    "labCoveredRegularCount": 91,
+    "eligibleOverallCount": 90,
+    "totalCredits": 19.5
+  },
+  "issues": [
+    {
+      "id": "eee-1212d-2024331088-conflict",
+      "severity": "warning",
+      "type": "conflicting-grade",
+      "courseId": "eee-0714-1212d",
+      "registration": "2024331088",
+      "sourceIds": [
+        "eee-0714-1212d-unofficial-even"
+      ],
+      "score": null,
+      "maxScore": null,
+      "note": null,
+      "message": "Source contains conflicting grades: A, A+. No grade was selected."
+    },
+    {
+      "id": "eee-1212d-session-mismatch",
+      "severity": "warning",
+      "type": "source-metadata-mismatch",
+      "courseId": "eee-0714-1212d",
+      "registration": null,
+      "sourceIds": [
+        "eee-0714-1212d-unofficial-odd"
+      ],
+      "message": "The PDF prints session 2021-22 while its filename identifies 2024-25."
+    }
+  ],
+  "sources": [
+    {
+      "id": "cse-0610-1250-official",
+      "fileName": "CSE06101250.pdf",
+      "pageCount": 5,
+      "rowCount": 100,
+      "status": "official"
+    },
+    {
+      "id": "cse-0613-1237-official",
+      "fileName": "CSE06131237.pdf",
+      "pageCount": 6,
+      "rowCount": 106,
+      "status": "official"
+    },
+    {
+      "id": "eee-0714-1211d-official",
+      "fileName": "EEE07141211D.pdf",
+      "pageCount": 6,
+      "rowCount": 118,
+      "status": "official"
+    },
+    {
+      "id": "ipe-0732-1206d-official",
+      "fileName": "IPE07321206D.pdf",
+      "pageCount": 5,
+      "rowCount": 99,
+      "status": "official"
+    },
+    {
+      "id": "mat-0541-1203d-official",
+      "fileName": "MAT05411203D.pdf",
+      "pageCount": 6,
+      "rowCount": 112,
+      "status": "official"
+    },
+    {
+      "id": "phy-0533-1202d-official",
+      "fileName": "PHY05331202D.pdf",
+      "pageCount": 5,
+      "rowCount": 99,
+      "status": "official"
+    },
+    {
+      "id": "phy-0533-1203d-official",
+      "fileName": "PHY05331203D.pdf",
+      "pageCount": 5,
+      "rowCount": 100,
+      "status": "official"
+    },
+    {
+      "id": "eee-0714-1212d-unofficial-odd",
+      "fileName": "EEE 0714 1212D_2024-25_22.7.2026_Unofficial.pdf",
+      "pageCount": 2,
+      "rowCount": 43,
+      "status": "unofficial"
+    },
+    {
+      "id": "eee-0714-1212d-unofficial-even",
+      "fileName": "EEE 0714 1212D_2024-25_LAB FINAL GRADE.docx.pdf",
+      "pageCount": 2,
+      "rowCount": 51,
+      "status": "unofficial"
+    },
+    {
+      "id": "cse-0613-1238-unofficial",
+      "fileName": "CSE 24 BATCH DS - Lab.csv",
+      "pageCount": null,
+      "rowCount": 126,
+      "status": "unofficial"
+    }
+  ]
+}

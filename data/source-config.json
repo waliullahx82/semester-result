@@ -1,0 +1,149 @@
+{
+  "semester": {
+    "department": "Department of Computer Science & Engineering",
+    "degree": "Bachelor of Science (Engineering)",
+    "name": "1-2 Semester",
+    "number": "2nd Semester",
+    "session": "2024-2025",
+    "usn": "July-December",
+    "regularRegistrationPrefix": "202433"
+  },
+  "gradePoints": {
+    "A+": 4.0,
+    "A": 3.75,
+    "A-": 3.5,
+    "B+": 3.25,
+    "B": 3.0,
+    "B-": 2.75,
+    "C+": 2.5,
+    "C": 2.25,
+    "C-": 2.0,
+    "F": 0.0
+  },
+  "sources": [
+    {
+      "fileName": "CSE06101250.pdf",
+      "sourceId": "cse-0610-1250-official",
+      "courseId": "cse-0610-1250",
+      "code": "CSE 0610 1250",
+      "title": "Capstone Project Work I",
+      "credits": 1.5,
+      "status": "official",
+      "expectedUniqueRows": 100
+    },
+    {
+      "fileName": "CSE06131237.pdf",
+      "sourceId": "cse-0613-1237-official",
+      "courseId": "cse-0613-1237",
+      "code": "CSE 0613 1237",
+      "title": "Data Structure",
+      "credits": 3.0,
+      "status": "official",
+      "expectedUniqueRows": 106
+    },
+    {
+      "fileName": "EEE07141211D.pdf",
+      "sourceId": "eee-0714-1211d-official",
+      "courseId": "eee-0714-1211d",
+      "code": "EEE 0714 1211D",
+      "title": "Electronic Devices and Circuits",
+      "credits": 3.0,
+      "status": "official",
+      "expectedUniqueRows": 118
+    },
+    {
+      "fileName": "IPE07321206D.pdf",
+      "sourceId": "ipe-0732-1206d-official",
+      "courseId": "ipe-0732-1206d",
+      "code": "IPE 0732 1206D",
+      "title": "Engineering Graphics",
+      "credits": 1.5,
+      "status": "official",
+      "expectedUniqueRows": 99
+    },
+    {
+      "fileName": "MAT05411203D.pdf",
+      "sourceId": "mat-0541-1203d-official",
+      "courseId": "mat-0541-1203d",
+      "code": "MAT 0541 1203D",
+      "title": "Calculus",
+      "credits": 3.0,
+      "status": "official",
+      "expectedUniqueRows": 112
+    },
+    {
+      "fileName": "PHY05331202D.pdf",
+      "sourceId": "phy-0533-1202d-official",
+      "courseId": "phy-0533-1202d",
+      "code": "PHY 0533 1202D",
+      "title": "Basic Physics Lab",
+      "credits": 1.5,
+      "status": "official",
+      "expectedUniqueRows": 99
+    },
+    {
+      "fileName": "PHY05331203D.pdf",
+      "sourceId": "phy-0533-1203d-official",
+      "courseId": "phy-0533-1203d",
+      "code": "PHY 0533 1203D",
+      "title": "Mechanics, Wave, Heat and Thermodynamics",
+      "credits": 3.0,
+      "status": "official",
+      "expectedUniqueRows": 100
+    },
+    {
+      "fileName": "EEE 0714 1212D_2024-25_22.7.2026_Unofficial.pdf",
+      "sourceId": "eee-0714-1212d-unofficial-odd",
+      "courseId": "eee-0714-1212d",
+      "code": "EEE 0714 1212D",
+      "title": "Electronic Devices and Circuits Lab",
+      "credits": 1.5,
+      "status": "unofficial",
+      "expectedUniqueRows": 43,
+      "notes": ["The printed session is 2021-22 while the filename identifies 2024-25; the mismatch is retained as a source warning."]
+    },
+    {
+      "fileName": "EEE 0714 1212D_2024-25_LAB FINAL GRADE.docx.pdf",
+      "sourceId": "eee-0714-1212d-unofficial-even",
+      "courseId": "eee-0714-1212d",
+      "code": "EEE 0714 1212D",
+      "title": "Electronic Devices and Circuits Lab",
+      "credits": 1.5,
+      "status": "unofficial",
+      "expectedUniqueRows": 51
+    },
+    {
+      "fileName": "CSE 24 BATCH DS - Lab.csv",
+      "relativePath": "pdf/CSE 24 BATCH DS - Lab.csv",
+      "format": "csv",
+      "sourceId": "cse-0613-1238-unofficial",
+      "courseId": "cse-0613-1238",
+      "code": "CSE 0613 1238",
+      "title": "Data Structure Lab",
+      "credits": 1.5,
+      "status": "unofficial",
+      "expectedUniqueRows": 126,
+      "notes": ["Course code and 1.5-credit value are supplied as configuration because the CSV contains marks and grades but no formal course metadata."]
+    }
+  ],
+  "reviewedIssues": [
+    {
+      "id": "eee-1212d-2024331088-conflict",
+      "type": "conflicting-grade",
+      "courseId": "eee-0714-1212d",
+      "registration": "2024331088",
+      "allowedGrades": ["A+", "A"],
+      "resolution": "unresolved"
+    }
+  ],
+  "expectations": {
+    "sourceCount": 10,
+    "officialSourceCount": 7,
+    "courseCount": 9,
+    "regularStudentCount": 116,
+    "officialRegularStudentCount": 96,
+    "labCoveredRegularCount": 91,
+    "eligibleOverallCount": 90,
+    "totalCredits": 19.5
+  }
+}
