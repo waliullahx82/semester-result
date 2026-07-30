@@ -1,12 +1,22 @@
 import { render, screen } from '@testing-library/react'
 import { MemoryRouter, Route, Routes } from 'react-router-dom'
 import { describe, expect, it } from 'vitest'
+import { SemesterProvider } from '../context/SemesterContext'
 import { ResultPage } from './ResultPage'
 
-function renderResult(registration: string) {
+function renderResult(registration: string, semester = '1-2') {
   render(
-    <MemoryRouter initialEntries={[`/result/${registration}`]}>
-      <Routes><Route path="/result/:registration" element={<ResultPage />} /></Routes>
+    <MemoryRouter initialEntries={[`/${semester}/result/${registration}`]}>
+      <Routes>
+        <Route
+          path="/:semester/result/:registration"
+          element={
+            <SemesterProvider>
+              <ResultPage />
+            </SemesterProvider>
+          }
+        />
+      </Routes>
     </MemoryRouter>,
   )
 }
@@ -29,5 +39,12 @@ describe('ResultPage', () => {
   it('shows an empty state for an unknown registration', () => {
     renderResult('9999999999')
     expect(screen.getByRole('heading', { name: 'No published result found' })).toBeInTheDocument()
+  })
+
+  it('shows grouped combined courses for both semesters', () => {
+    renderResult('2024331001', 'combined')
+    expect(screen.getByRole('heading', { name: '1-1 semester courses' })).toBeInTheDocument()
+    expect(screen.getByRole('heading', { name: '1-2 semester courses' })).toBeInTheDocument()
+    expect(screen.getByText('Combined CGPA')).toBeInTheDocument()
   })
 })

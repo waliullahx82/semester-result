@@ -1,8 +1,19 @@
 import { Link } from 'react-router-dom'
+import { useSemester } from '../context/SemesterContext'
 import { formatScore } from '../lib/results'
 import type { RankedEntry } from '../types'
 
-export function LeaderboardTable({ entries, mode }: { entries: RankedEntry[]; mode: 'overall' | 'course' }) {
+export function LeaderboardTable({
+  entries,
+  mode,
+  scoreLabel = mode === 'overall' ? 'SGPA' : 'Grade point',
+}: {
+  entries: RankedEntry[]
+  mode: 'overall' | 'course'
+  scoreLabel?: string
+}) {
+  const { pathFor } = useSemester()
+
   return (
     <div className="table-scroll">
       <table className="data-table leaderboard-table">
@@ -14,7 +25,7 @@ export function LeaderboardTable({ entries, mode }: { entries: RankedEntry[]; mo
             <th scope="col">Rank</th>
             <th scope="col">Student</th>
             <th scope="col">Registration</th>
-            <th scope="col">{mode === 'overall' ? 'SGPA' : 'Grade point'}</th>
+            <th scope="col">{scoreLabel}</th>
             {mode === 'overall' && <th scope="col">Credits</th>}
           </tr>
         </thead>
@@ -26,11 +37,11 @@ export function LeaderboardTable({ entries, mode }: { entries: RankedEntry[]; mo
               </td>
               <td data-label="Student">{entry.name ?? 'Name unavailable from source'}</td>
               <td data-label="Registration">
-                <Link to={`/result/${entry.registration}`} className="registration-link">
+                <Link to={pathFor(`result/${entry.registration}`)} className="registration-link">
                   {entry.registration}
                 </Link>
               </td>
-              <td data-label={mode === 'overall' ? 'SGPA' : 'Grade point'}>
+              <td data-label={scoreLabel}>
                 <strong className="tabular">{formatScore(entry.score)}</strong>
               </td>
               {mode === 'overall' && <td data-label="Credits">{entry.totalCredits.toFixed(1)}</td>}

@@ -137,6 +137,33 @@ p { line-height: 1.65; text-wrap: pretty; }
 .brand strong { font-size: 0.94rem; letter-spacing: -0.01em; }
 .brand small { color: var(--muted); font-size: 0.72rem; margin-top: 1px; }
 
+.semester-switcher {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.2rem;
+  padding: 0.2rem;
+  border: 1px solid var(--border);
+  border-radius: 11px;
+  background: var(--surface);
+}
+.semester-chip {
+  min-height: 34px;
+  min-width: 3.1rem;
+  padding: 0.35rem 0.7rem;
+  border: 0;
+  border-radius: 8px;
+  background: transparent;
+  color: var(--muted);
+  cursor: pointer;
+  font-size: 0.78rem;
+  font-weight: 750;
+}
+.semester-chip:hover { color: var(--ink); background: var(--surface-raised); }
+.semester-chip.active {
+  color: var(--primary);
+  background: var(--primary-soft);
+}
+
 .desktop-nav { display: flex; align-items: center; gap: 0.25rem; }
 .desktop-nav a { display: inline-flex; align-items: center; gap: 0.45rem; padding: 0.62rem 0.78rem; border-radius: 9px; color: var(--muted); text-decoration: none; font-size: 0.86rem; font-weight: 600; }
 .desktop-nav a:hover { color: var(--ink); background: var(--surface); }
@@ -317,6 +344,9 @@ p { line-height: 1.65; text-wrap: pretty; }
 
 @media (max-width: 900px) {
   .desktop-nav { display: none; }
+  .header-inner { height: auto; min-height: 68px; flex-wrap: wrap; padding-block: 0.55rem; gap: 0.65rem 1rem; }
+  .semester-switcher { order: 3; width: 100%; justify-content: stretch; }
+  .semester-chip { flex: 1; }
   .mobile-nav { position: fixed; left: 10px; right: 10px; bottom: 10px; z-index: 40; display: grid; grid-template-columns: repeat(4, 1fr); padding: 0.35rem; border: 1px solid var(--border); border-radius: 14px; background: var(--header); backdrop-filter: blur(16px); box-shadow: 0 6px 8px oklch(0 0 0 / 0.14); }
   .mobile-nav a { min-height: 49px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 0.2rem; border-radius: 9px; color: var(--muted); text-decoration: none; font-size: 0.62rem; font-weight: 650; }
   .mobile-nav a.active { color: var(--primary); background: var(--primary-soft); }

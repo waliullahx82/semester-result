@@ -5,6 +5,8 @@
   "type": "module",
   "scripts": {
     "data:build": "python scripts/build_results.py",
+    "data:build:1-1": "python scripts/build_1_1_results.py",
+    "data:build:all": "python scripts/build_results.py && python scripts/build_1_1_results.py",
     "dev": "vite",
     "build": "tsc -b && vite build",
     "preview": "vite preview",

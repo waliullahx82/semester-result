@@ -1,5 +1,7 @@
 export type SourceStatus = 'official' | 'unofficial'
 export type ResultStatus = SourceStatus | 'conflicted'
+export type SemesterKey = '1-1' | '1-2' | 'combined'
+export type SourceKind = 'pdf' | 'csv' | 'xlsx'
 
 export interface Semester {
   department: string
@@ -18,6 +20,7 @@ export interface Course {
   credits: number
   status: SourceStatus
   sourceIds: string[]
+  semesterKey?: '1-1' | '1-2'
 }
 
 export interface Student {
@@ -43,7 +46,7 @@ export interface SourceDocument {
   id: string
   fileName: string
   url: string
-  kind: 'pdf' | 'csv'
+  kind: SourceKind
   status: SourceStatus
   courseId: string
   pageCount: number | null
@@ -117,4 +120,11 @@ export interface CourseAnalytics {
   averageGradePoint: number
   passRate: number
   distribution: Array<{ grade: string; count: number }>
+}
+
+export interface SemesterOption {
+  key: SemesterKey
+  label: string
+  shortLabel: string
+  description: string
 }

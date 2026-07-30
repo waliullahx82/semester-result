@@ -1,11 +1,13 @@
 import { ArrowRight, Search } from 'lucide-react'
 import { useId, useState, type FormEvent } from 'react'
 import { useNavigate } from 'react-router-dom'
+import { useSemester } from '../context/SemesterContext'
 
 export function SearchForm({ compact = false }: { compact?: boolean }) {
   const [registration, setRegistration] = useState('')
   const [error, setError] = useState('')
   const navigate = useNavigate()
+  const { pathFor, semesterLabel } = useSemester()
   const inputId = useId()
   const helpId = `${inputId}-help`
 
@@ -17,13 +19,17 @@ export function SearchForm({ compact = false }: { compact?: boolean }) {
       return
     }
     setError('')
-    navigate(`/result/${normalized}`)
+    navigate(pathFor(`result/${normalized}`))
   }
 
   return (
     <form className={`result-search ${compact ? 'result-search-compact' : ''}`} onSubmit={submit} noValidate>
       <label htmlFor={inputId}>{compact ? 'Registration number' : 'Find an individual result'}</label>
-      {!compact && <p id={helpId}>Search every published registration across all supplied course results.</p>}
+      {!compact && (
+        <p id={helpId}>
+          Search published registrations in the {semesterLabel.toLowerCase()} view.
+        </p>
+      )}
       <div className="search-control">
         <Search size={19} aria-hidden="true" />
         <input
