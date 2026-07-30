@@ -8110,6 +8110,19 @@
       "note": null
     },
     {
+      "registration": "2024331115",
+      "courseId": "eee-0714-1212d",
+      "letterGrade": "A+",
+      "gradePoint": 4.0,
+      "status": "unofficial",
+      "sourceIds": [
+        "eee-0714-1212d-unofficial-even"
+      ],
+      "score": null,
+      "maxScore": null,
+      "note": null
+    },
+    {
       "registration": "2024331116",
       "courseId": "eee-0714-1212d",
       "letterGrade": "A+",
